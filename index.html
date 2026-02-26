@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tools I Use — 1-Minute Life Systems</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 100%);
+            color: #fff;
+            min-height: 100vh;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .container {
+            max-width: 480px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .logo {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        
+        .name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .bio {
+            color: #94a3b8;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        
+        .section-title {
+            font-size: 0.75rem;
+            color: #667eea;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 40px;
+        }
+        
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px 20px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.2s;
+        }
+        
+        .link-btn:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(102,126,234,0.5);
+            transform: translateY(-2px);
+        }
+        
+        .link-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            text-align: center;
+        }
+        
+        .link-content {
+            flex: 1;
+        }
+        
+        .link-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            margin-bottom: 2px;
+        }
+        
+        .link-desc {
+            font-size: 0.8rem;
+            color: #64748b;
+        }
+        
+        .coming-soon {
+            background: rgba(245, 158, 11, 0.1);
+            border-color: rgba(245, 158, 11, 0.3);
+        }
+        
+        .coming-soon:hover {
+            background: rgba(245, 158, 11, 0.15);
+        }
+        
+        .footer {
+            text-align: center;
+            color: #475569;
+            font-size: 0.8rem;
+            margin-top: 40px;
+        }
+        
+        .affiliate-note {
+            font-size: 0.7rem;
+            color: #475569;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo">⚡</div>
+            <h1 class="name">1-Minute Life Systems</h1>
+            <p class="bio">Simple systems for busy minds.<br>Tools that actually work.</p>
+        </header>
+        
+        <p class="section-title">🛠️ Recommended Tools</p>
+        
+        <div class="links">
+            <a href="https://notion.so" class="link-btn" target="_blank" rel="noopener">
+                <span class="link-icon">📝</span>
+                <div class="link-content">
+                    <div class="link-title">Notion</div>
+                    <div class="link-desc">My productivity workspace — Free plan</div>
+                </div>
+            </a>
+            
+            <a href="https://todoist.com" class="link-btn" target="_blank" rel="noopener">
+                <span class="link-icon">✅</span>
+                <div class="link-content">
+                    <div class="link-title">Todoist</div>
+                    <div class="link-desc">Daily task management — Free tier</div>
+                </div>
+            </a>
+            
+            <a href="#" class="link-btn coming-soon">
+                <span class="link-icon">📚</span>
+                <div class="link-content">
+                    <div class="link-title">Amazon Books</div>
+                    <div class="link-desc">My top productivity reads — Coming soon</div>
+                </div>
+            </a>
+            
+            <a href="#" class="link-btn coming-soon">
+                <span class="link-icon">🎯</span>
+                <div class="link-content">
+                    <div class="link-title">Notion Templates</div>
+                    <div class="link-desc">My custom systems — Building now</div>
+                </div>
+            </a>
+        </div>
+        
+        <p class="section-title">📱 Social</p>
+        
+        <div class="links">
+            <a href="https://tiktok.com/@???" class="link-btn" target="_blank">
+                <span class="link-icon">📱</span>
+                <div class="link-content">
+                    <div class="link-title">TikTok</div>
+                    <div class="link-desc">Daily 1-minute systems</div>
+                </div>
+            </a>
+            
+            <a href="mailto:your@email.com" class="link-btn">
+                <span class="link-icon">📧</span>
+                <div class="link-content">
+                    <div class="link-title">Contact</div>
+                    <div class="link-desc">Questions or collaborations</div>
+                </div>
+            </a>
+        </div>
+        
+        <footer class="footer">
+            <p>1-Minute Life Systems © 2026</p>
+            <p class="affiliate-note">Some links are affiliate links — at no extra cost to you</p>
+        </footer>
+    </div>
+</body>
+</html>
