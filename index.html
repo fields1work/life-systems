@@ -1,220 +1,200 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus With Fields</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+ body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        background: #0d0d0d;
+        color: #ffffff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 60px 20px;
+        line-height: 1.6;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 450px;
+        text-align: center;
+    }
+    
+    .logo {
+        font-size: 4rem;
+        margin-bottom: 20px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+        font-weight: 800;
+        margin-bottom: 12px;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+    
+    .tagline {
+        font-size: 1.1rem;
+        color: #94a3b8;
+        margin-bottom: 50px;
+        font-weight: 400;
+    }
+    
+    .section-label {
+        font-size: 0.7rem;
+        font-weight: 600;
+        color: #64748b;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        margin-bottom: 20px;
+    }
+    
+    .links {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .link-btn {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 14px;
+        padding: 18px 22px;
+        text-decoration: none;
+        color: #ffffff;
+        transition: all 0.3s ease;
+        text-align: left;
+    }
+    
+    .link-btn:hover {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: rgba(102, 126, 234, 0.5);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+    
+    .link-icon {
+        font-size: 1.8rem;
+        width: 40px;
+        text-align: center;
+    }
+    
+    .link-content {
+        flex: 1;
+    }
+    
+    .link-title {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 2px;
+    }
+    
+    .link-desc {
+        font-size: 0.8rem;
+        color: #64748b;
+    }
+    
+    .link-btn.coming-soon {
+        opacity: 0.6;
+        cursor: default;
+    }
+    
+    .link-btn.coming-soon:hover {
+        transform: none;
+        border-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .badge {
+        display: inline-block;
+        background: rgba(245, 158, 11, 0.2);
+        color: #f59e0b;
+        font-size: 0.65rem;
+        font-weight: 600;
+        padding: 3px 8px;
+        border-radius: 12px;
+        margin-left: 8px;
+        text-transform: uppercase;
+    }
+    
+    .footer {
+        margin-top: 60px;
+        padding-top: 30px;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .footer-note {
+        font-size: 0.7rem;
+        color: #475569;
+    }
+    
+    @media (max-width: 480px) {
+        h1 { font-size: 1.7rem; }
+        .tagline { font-size: 1rem; }
+        .link-btn { padding: 16px 18px; }
+    }
+</style>
+</head> <body> <div class="container"> <div class="logo">⚡</div>
+    <h1>Focus With Fields</h1>
+    <p class="tagline">Simple systems for busy minds.</p>
+    
+    <p class="section-label">Recommended Tools</p>
+    
+    <div class="links">
+        <a href="https://notion.so?utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=landing_page" class="link-btn" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">📝</span>
+            <div class="link-content">
+                <div class="link-title">Notion<span class="badge">Best</span></div>
+                <div class="link-desc">My productivity workspace — Free forever plan</div>
+            </div>
+        </a>
         
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0d0d0d;
-            color: #ffffff;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 60px 20px;
-            line-height: 1.6;
-        }
+        <a href="https://todoist.com?utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=landing_page" class="link-btn" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">✅</span>
+            <div class="link-content">
+                <div class="link-title">Todoist</div>
+                <div class="link-desc">Daily task management — Free tier included</div>
+            </div>
+        </a>
         
-        .container {
-            width: 100%;
-            max-width: 450px;
-            text-align: center;
-        }
+        <p class="section-label">Free Template</p>
         
-        .logo {
-            font-size: 4rem;
-            margin-bottom: 20px;
-        }
+        <a href="https://elfin-carob-adf.notion.site/Morning-Routine-System-by-Focus-With-Fields-314abf0fbfd78012bea4e21150b3ef16" class="link-btn" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">🌅</span>
+            <div class="link-content">
+                <div class="link-title">Free Morning Template<span class="badge">FREE</span></div>
+                <div class="link-desc">Free morning routine system — click Duplicate to save</div>
+            </div>
+        </a>
         
-        h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
+        <p class="section-label">Recommended Reads</p>
         
-        .tagline {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 50px;
-            font-weight: 400;
-        }
+        <a href="https://www.amazon.com/dp/0735211299?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">💡</span>
+            <div class="link-content">
+                <div class="link-title">💡📚 Atomic Habits<span class="badge">Top Pick</span></div>
+                <div class="link-desc">James Clear — Build better systems</div>
+            </div>
+        </a>
         
-        .section-label {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
+        <a href="https://www.amazon.com/dp/1455586692?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">🧠</span>
+            <div class="link-content">
+                <div class="link-title">🧠📚 Deep Work</div>
+                <div class="link-desc">Cal Newport — Focus in a distracted world</div>
+            </div>
+        </a>
         
-        .links {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-        
-        .link-btn {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 14px;
-            padding: 18px 22px;
-            text-decoration: none;
-            color: #ffffff;
-            transition: all 0.3s ease;
-            text-align: left;
-        }
-        
-        .link-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(102, 126, 234, 0.5);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-        }
-        
-        .link-icon {
-            font-size: 1.8rem;
-            width: 40px;
-            text-align: center;
-        }
-        
-        .link-content {
-            flex: 1;
-        }
-        
-        .link-title {
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 2px;
-        }
-        
-        .link-desc {
-            font-size: 0.8rem;
-            color: #64748b;
-        }
-        
-        .link-btn.coming-soon {
-            opacity: 0.6;
-            cursor: default;
-        }
-        
-        .link-btn.coming-soon:hover {
-            transform: none;
-            border-color: rgba(255, 255, 255, 0.1);
-        }
-        
-        .badge {
-            display: inline-block;
-            background: rgba(245, 158, 11, 0.2);
-            color: #f59e0b;
-            font-size: 0.65rem;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 12px;
-            margin-left: 8px;
-            text-transform: uppercase;
-        }
-        
-        .footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .footer-note {
-            font-size: 0.7rem;
-            color: #475569;
-        }
-        
-        @media (max-width: 480px) {
-            h1 { font-size: 1.7rem; }
-            .tagline { font-size: 1rem; }
-            .link-btn { padding: 16px 18px; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="logo">⚡</div>
-        
-        <h1>Focus With Fields</h1>
-        <p class="tagline">Simple systems for busy minds.</p>
-        
-        <p class="section-label">Recommended Tools</p>
-        
-        <div class="links">
-            <a href="https://notion.so?utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=landing_page" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">📝</span>
-                <div class="link-content">
-                    <div class="link-title">Notion<span class="badge">Best</span></div>
-                    <div class="link-desc">My productivity workspace — Free forever plan</div>
-                </div>
-            </a>
-            
-            <a href="https://todoist.com?utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=landing_page" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">✅</span>
-                <div class="link-content">
-                    <div class="link-title">Todoist</div>
-                    <div class="link-desc">Daily task management — Free tier included</div>
-                </div>
-            </a>
-            
-            <p class="section-label">Free Template</p>
-            
-            <a href="https://elfin-carob-adf.notion.site/Morning-Routine-System-by-Focus-With-Fields-314abf0fbfd78012bea4e21150b3ef16" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">🌅</span>
-                <div class="link-content">
-                    <div class="link-title">Free Morning Template<span class="badge">FREE</span></div>
-                    <div class="link-desc">Free morning routine system — click Duplicate to save</div>
-                </div>
-            </a>
-            
-            <p class="section-label">Recommended Reads</p>
-            
-            <a href="https://www.amazon.com/dp/0735211299?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">📚</span>
-                <div class="link-content">
-                    <div class="link-title">📚 Atomic Habits<span class="badge">Top Pick</span></div>
-                    <div class="link-desc">James Clear — Build better systems</div>
-                </div>
-            </a>
-            
-            <a href="https://www.amazon.com/dp/1455586692?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">🧠</span>
-                <div class="link-content">
-                    <div class="link-title">📚 Deep Work</div>
-                    <div class="link-desc">Cal Newport — Focus in a distracted world</div>
-                </div>
-            </a>
-            
-            <a href="https://www.amazon.com/dp/0804137382?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">🎯</span>
-                <div class="link-content">
-                    <div class="link-title">📚 Essentialism</div>
-                    <div class="link-desc">Greg McKeown — Less but better</div>
-                </div>
-            </a>
-        </div>
-        
-        <footer class="footer">
-            <div class="footer-note">Some links are affiliate links — at no extra cost to you</div>
-        </footer>
+        <a href="https://www.amazon.com/dp/0804137382?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
+            <span class="link-icon">🎯</span>
+            <div class="link-content">
+                <div class="link-title">🎯📚 Essentialism</div>
+                <div class="link-desc">Greg McKeown — Less but better</div>
+            </div>
+        </a>
     </div>
-</body>
-</html>
+    
+    <footer class="footer">
+        <div class="footer-note">Some links are affiliate links — at no extra cost to you</div>
+    </footer>
+</div>
