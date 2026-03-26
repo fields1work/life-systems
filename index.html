@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="fo-verify" content="b6cdb964-413f-4ca9-a94d-201b576f1587" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Focus With Fields</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <title>@focuswithfields — 1 Minute Life Systems</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -13,196 +14,508 @@
             box-sizing: border-box;
         }
         
+        :root {
+            --bg: #0d0d0d;
+            --bg-card: #141414;
+            --bg-hover: #1a1a1a;
+            --border: #2a2a2a;
+            --border-hover: #3a3a3a;
+            --accent: #22c55e;
+            --accent-glow: rgba(34, 197, 94, 0.15);
+            --text: #ffffff;
+            --text-muted: #9ca3af;
+            --text-dim: #6b7280;
+        }
+        
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #0d0d0d;
-            color: #ffffff;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding: 60px 20px;
             line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
         }
         
         .container {
-            width: 100%;
-            max-width: 450px;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+        
+        /* Typography */
+        .mono {
+            font-family: 'JetBrains Mono', 'Fira Code', monospace;
+        }
+        
+        /* Hero Section */
+        .hero {
             text-align: center;
+            margin-bottom: 60px;
         }
         
         .logo {
-            font-size: 4rem;
+            width: 48px;
+            height: 48px;
+            background: var(--accent);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+            font-size: 24px;
+        }
+        
+        .hero h1 {
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hero h1 span {
+            color: var(--accent);
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .cta-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
             margin-bottom: 20px;
         }
         
-        h1 {
-            font-size: 2rem;
-            font-weight: 800;
-            margin-bottom: 12px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            border: 1px solid transparent;
         }
         
-        .tagline {
-            font-size: 1.1rem;
-            color: #94a3b8;
-            margin-bottom: 50px;
-            font-weight: 400;
+        .btn-primary {
+            background: var(--accent);
+            color: #000;
+        }
+        
+        .btn-primary:hover {
+            background: #16a34a;
+            transform: translateY(-1px);
+        }
+        
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text);
+            border-color: var(--border);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-hover);
+        }
+        
+        .hero-note {
+            font-size: 0.8rem;
+            color: var(--text-dim);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Bloom Section */
+        .bloom-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bloom-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0.6;
+        }
+        
+        .bloom-section::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            border-radius: 16px;
+            padding: 1px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.3), transparent 50%);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+        
+        .section-header {
+            margin-bottom: 24px;
         }
         
         .section-label {
+            font-family: 'JetBrains Mono', monospace;
             font-size: 0.7rem;
-            font-weight: 600;
-            color: #64748b;
+            font-weight: 500;
+            color: var(--accent);
             text-transform: uppercase;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        
+        .section-desc {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .bloom-cta {
+            margin-top: 24px;
+        }
+        
+        .bloom-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: #000;
+            padding: 16px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 24px rgba(34, 197, 94, 0.25);
+        }
+        
+        .bloom-btn:hover {
+            background: #16a34a;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(34, 197, 94, 0.35);
+        }
+        
+        /* Content Sections */
+        .content-section {
+            margin-bottom: 48px;
+        }
+        
+        .content-section .section-header {
             margin-bottom: 20px;
         }
         
-        .links {
+        .content-section .section-label {
+            color: var(--text-dim);
+        }
+        
+        /* Cards */
+        .card-grid {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
         
-        .link-btn {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 14px;
-            padding: 18px 22px;
+        .card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
             text-decoration: none;
-            color: #ffffff;
-            transition: all 0.3s ease;
-            text-align: left;
+            color: inherit;
+            transition: all 0.2s ease;
+            display: block;
         }
         
-        .link-btn:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(102, 126, 234, 0.5);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        .card:hover {
+            background: var(--bg-hover);
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
         }
         
-        .link-icon {
-            font-size: 1.8rem;
-            width: 40px;
+        .card-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            margin-bottom: 8px;
+        }
+        
+        .card-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--text);
+        }
+        
+        .card-arrow {
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .card:hover .card-arrow {
+            transform: translateX(3px);
+            color: var(--accent);
+        }
+        
+        .card-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.5;
+        }
+        
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--accent);
+            margin-top: 12px;
+        }
+        
+        /* Affiliate Notice */
+        .affiliate-note {
+            background: rgba(34, 197, 94, 0.08);
+            border: 1px solid rgba(34, 197, 94, 0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-bottom: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        .affiliate-note span {
+            color: var(--accent);
+            font-weight: 500;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding-top: 32px;
             text-align: center;
         }
         
-        .link-content {
-            flex: 1;
-        }
-        
-        .link-title {
-            font-weight: 600;
-            font-size: 1rem;
-            margin-bottom: 2px;
-        }
-        
-        .link-desc {
-            font-size: 0.8rem;
-            color: #64748b;
-        }
-        
-        .badge {
-            display: inline-block;
-            background: rgba(245, 158, 11, 0.2);
-            color: #f59e0b;
-            font-size: 0.65rem;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 12px;
-            margin-left: 8px;
-            text-transform: uppercase;
-        }
-        
-        .footer {
-            margin-top: 60px;
-            padding-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
         .footer-note {
-            font-size: 0.7rem;
-            color: #475569;
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            margin-bottom: 12px;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-credit {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            font-family: 'JetBrains Mono', monospace;
+        }
+        
+        /* Mobile */
+        @media (max-width: 480px) {
+            .container {
+                padding: 40px 16px;
+            }
+            
+            .bloom-section {
+                padding: 24px;
+            }
+            
+            .cta-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .btn {
+                justify-content: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">⚡</div>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="logo">⚡</div>
+            <h1>Simple systems for <span>busy minds.</span></h1>
+            <p>I make 1-minute productivity content for people who can't get started.</p>
+            <div class="cta-row">
+                <a href="https://tiktok.com/@focuswithfields" class="btn btn-primary" target="_blank" rel="noopener">
+                    Watch on TikTok
+                </a>
+                <a href="https://bloom-rust.vercel.app" class="btn btn-secondary" target="_blank" rel="noopener">
+                    Try Bloom Free
+                </a>
+            </div>
+            <p class="hero-note">@focuswithfields — 45 followers, building in public</p>
+        </section>
         
-        <h1>Focus With Fields</h1>
-        <p class="tagline">Simple systems for busy minds.</p>
+        <!-- Bloom Section -->
+        <section class="bloom-section">
+            <div class="section-header">
+                <p class="section-label">New</p>
+                <h2 class="section-title">I built this for you</h2>
+                <p class="section-desc">Bloom is a daily habit app for people who feel lost in the morning. Your plant grows when you show up. Free, no login required.</p>
+            </div>
+            <div class="bloom-cta">
+                <a href="https://bloom-rust.vercel.app" class="bloom-btn" target="_blank" rel="noopener">
+                    Open Bloom 🌱
+                </a>
+            </div>
+        </section>
         
-        <p class="section-label">Recommended Tools</p>
+        <!-- Supplements Section -->
+        <section class="content-section">
+            <div class="section-header">
+                <p class="section-label">Supplements</p>
+                <h2 class="section-title">What I actually take</h2>
+            </div>
+            <div class="affiliate-note">
+                <span>#ad</span> These are affiliate links — I only list what I'd personally recommend.
+            </div>
+            <div class="card-grid">
+                <a href="https://www.mindlabpro.com/?a_aid=69b9c91c15c4e&a_bid=6d45f5c3" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Mind Lab Pro</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">Universal nootropic — the one I trust for clean focus without stimulants</p>
+                    <span class="card-cta">Get it →</span>
+                </a>
+                
+                <a href="https://www.performancelab.com/?a_aid=69b9c91c15c4e&a_bid=a2ad38c1" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Performance Lab</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">Whole-life optimization stack — energy, sleep, sport in one system</p>
+                    <span class="card-cta">Get it →</span>
+                </a>
+                
+                <a href="https://www.nutropic.com/?a_aid=69b9c91c15c4e&a_bid=daf06cbc" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Nu:tropic</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">Clean cognitive support — no crash, no jitters</p>
+                    <span class="card-cta">Get it →</span>
+                </a>
+                
+                <a href="https://www.prelabpro.com/?a_aid=69b9c91c15c4e&a_bid=cd5830f2" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Pre Lab Pro</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">Pre-workout that doesn't wreck your focus afterward</p>
+                    <span class="card-cta">Get it →</span>
+                </a>
+            </div>
+        </section>
         
-        <div class="links">
-            <a href="https://notion.so?utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=landing_page" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">📝</span>
-                <div class="link-content">
-                    <div class="link-title">Notion<span class="badge">Best</span></div>
-                    <div class="link-desc">My productivity workspace — Free forever plan</div>
-                </div>
-            </a>
-            
-            <a href="https://todoist.com?utm_source=tiktok&utm_medium=social&utm_campaign=bio_link&utm_content=landing_page" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">✅</span>
-                <div class="link-content">
-                    <div class="link-title">Todoist</div>
-                    <div class="link-desc">Daily task management — Free tier included</div>
-                </div>
-            </a>
-        </div>
+        <!-- Tools Section -->
+        <section class="content-section">
+            <div class="section-header">
+                <p class="section-label">Tools</p>
+                <h2 class="section-title">Tools I actually use</h2>
+            </div>
+            <div class="card-grid">
+                <a href="https://todoist.com" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Todoist</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">My daily task system — free tier is all you need</p>
+                    <span class="card-cta">Try it →</span>
+                </a>
+            </div>
+        </section>
         
-        <p class="section-label">Free Template</p>
+        <!-- Books Section -->
+        <section class="content-section">
+            <div class="section-header">
+                <p class="section-label">Reading</p>
+                <h2 class="section-title">Read these</h2>
+            </div>
+            <div class="card-grid">
+                <a href="https://www.amazon.com/dp/0735211299?tag=focuswithfiel-20" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Atomic Habits — James Clear</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">The system that changed how I think about habits</p>
+                    <span class="card-cta">Get on Amazon →</span>
+                </a>
+                
+                <a href="https://www.amazon.com/dp/1455586692?tag=focuswithfiel-20" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Deep Work — Cal Newport</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">How to actually focus in a distracted world</p>
+                    <span class="card-cta">Get on Amazon →</span>
+                </a>
+                
+                <a href="https://www.amazon.com/dp/0804137382?tag=focuswithfiel-20" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">Essentialism — Greg McKeown</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">Less but better. Cut everything that doesn't matter.</p>
+                    <span class="card-cta">Get on Amazon →</span>
+                </a>
+            </div>
+        </section>
         
-        <div class="links">
-            <a href="https://elfin-carob-adf.notion.site/Morning-Routine-System-by-Focus-With-Fields-314abf0fbfd78012bea4e21150b3ef16" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">🌅</span>
-                <div class="link-content">
-                    <div class="link-title">Free Morning Template<span class="badge">FREE</span></div>
-                    <div class="link-desc">Click Duplicate to save to your Notion</div>
-                </div>
-            </a>
-        </div>
-        
-        <p class="section-label">Recommended Reads</p>
-        
-        <div class="links">
-            <a href="https://www.amazon.com/dp/0735211299?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">📚</span>
-                <div class="link-content">
-                    <div class="link-title">Atomic Habits<span class="badge">Top Pick</span></div>
-                    <div class="link-desc">James Clear — Build better systems</div>
-                </div>
-            </a>
-            
-            <a href="https://www.amazon.com/dp/1455586692?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">📚</span>
-                <div class="link-content">
-                    <div class="link-title">Deep Work</div>
-                    <div class="link-desc">Cal Newport — Focus in a distracted world</div>
-                </div>
-            </a>
-            
-            <a href="https://www.amazon.com/dp/0804137382?tag=focuswithfiel-20" class="link-btn" target="_blank" rel="noopener noreferrer">
-                <span class="link-icon">📚</span>
-                <div class="link-content">
-                    <div class="link-title">Essentialism</div>
-                    <div class="link-desc">Greg McKeown — Less but better</div>
-                </div>
-            </a>
-        </div>
-        
-        <footer class="footer">
-            <div class="footer-note">Some links are affiliate links — at no extra cost to you</div>
+        <!-- Footer -->
+        <footer>
+            <p class="footer-note">Some links are affiliate links — at no extra cost to you. #ad</p>
+            <div class="footer-links">
+                <a href="https://tiktok.com/@focuswithfields" target="_blank" rel="noopener">TikTok</a>
+            </div>
+            <p class="footer-credit">Built by Fields · @focuswithfields · Chicago</p>
         </footer>
     </div>
 </body>
