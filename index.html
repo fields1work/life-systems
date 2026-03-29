@@ -509,6 +509,46 @@
             </div>
         </section>
         
+        <!-- Building in public -->
+        <section class="content-section">
+            <div class="section-header">
+                <div class="section-label">Building in public</div>
+                <h2 class="section-title">The journey so far</h2>
+            </div>
+            <div class="card-grid">
+                <div class="card" style="cursor:default">
+                    <div class="card-header">
+                        <h3 class="card-title">🎯 Follower goal</h3>
+                    </div>
+                    <p class="card-desc">100 followers by April 4, 2026. Started Feb 17.</p>
+                    <p class="card-desc" style="margin-top:8px;font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--accent)" id="days-counter">Loading…</p>
+                </div>
+                <a href="https://bloom-rust.vercel.app" class="card" target="_blank" rel="noopener">
+                    <div class="card-header">
+                        <h3 class="card-title">🌱 App: Bloom — live now</h3>
+                        <span class="card-arrow">→</span>
+                    </div>
+                    <p class="card-desc">Daily habit tracker. Show up daily. Watch yourself grow.</p>
+                    <span class="card-cta">Try Bloom →</span>
+                </a>
+                <div class="card" style="cursor:default">
+                    <div class="card-header">
+                        <h3 class="card-title">📱 Latest episode</h3>
+                    </div>
+                    <p class="card-desc">EP039 — "Waiting Mode"</p>
+                </div>
+            </div>
+        </section>
+        <script>
+            (function() {
+                var start = new Date('2026-02-17');
+                var now   = new Date();
+                var days  = Math.floor((now - start) / 86400000);
+                var el    = document.getElementById('days-counter');
+                if (el) el.textContent = 'Day ' + days + ' since starting.';
+            })();
+        </script>
+
         <!-- Footer -->
         <footer>
             <p class="footer-note">Some links are affiliate links — at no extra cost to you. #ad</p>
